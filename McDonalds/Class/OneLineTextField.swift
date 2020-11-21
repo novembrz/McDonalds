@@ -12,10 +12,11 @@ class OneLineTextField: UITextField {
     convenience init(phText: String = "", font: UIFont? = .kohinoor16(), lineColor: UIColor) {
         self.init()
         
-        placeholder = phText
         self.font = font
         tintColor = lineColor
         textColor = lineColor
+        
+        attributedPlaceholder = NSAttributedString(string: phText, attributes: [NSAttributedString.Key.foregroundColor: lineColor])
         
         self.borderStyle = .none
         self.translatesAutoresizingMaskIntoConstraints = false
