@@ -7,9 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF8235D25BA520F2772D11CC /* Pods_McDonalds.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 60A639179E445A77FB94103A /* Pods_McDonalds.framework */; };
+		C23579E1256CD1850008EF4D /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = C23579E0256CD1850008EF4D /* GoogleService-Info.plist */; };
 		C23E246A256857540035CA1E /* UIButton + Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = C23E2469256857540035CA1E /* UIButton + Animation.swift */; };
-		C24127A52561C6C500DD061A /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24127A42561C6C500DD061A /* ProfileViewController.swift */; };
-		C24127A82561C9FB00DD061A /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24127A72561C9FB00DD061A /* ProfileCell.swift */; };
+		C24127A82561C9FB00DD061A /* StandartProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C24127A72561C9FB00DD061A /* StandartProfileCell.swift */; };
+		C253AC64256C2C09002FF7C1 /* DateProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C253AC63256C2C09002FF7C1 /* DateProfileCell.swift */; };
+		C253AC6A256C3816002FF7C1 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C253AC69256C3816002FF7C1 /* ProfileViewController.swift */; };
 		C26E16BF2561B2B0009DB676 /* UIStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26E16BE2561B2B0009DB676 /* UIStackView.swift */; };
 		C26E16C32561B96D009DB676 /* SetupProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C26E16C22561B96D009DB676 /* SetupProfileViewController.swift */; };
 		C2971E5325616EBC005E623D /* UIButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2971E5225616EBC005E623D /* UIButton.swift */; };
@@ -24,14 +27,18 @@
 		C2A87F4B2561642600607C4B /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A87F4A2561642600607C4B /* UIColor.swift */; };
 		C2A87F4E256168FA00607C4B /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2A87F4D256168FA00607C4B /* AuthViewController.swift */; };
 		C2B93E8025682EBB00CD165A /* CustomSegmentedControl.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B93E7F25682EBB00CD165A /* CustomSegmentedControl.swift */; };
-		C2B93E832568368C00CD165A /* TestViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2B93E822568368C00CD165A /* TestViewController.swift */; };
 		C2E3BFBE25629C5A0036FF02 /* UISegmentedControll.swift in Sources */ = {isa = PBXBuildFile; fileRef = C2E3BFBD25629C5A0036FF02 /* UISegmentedControll.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		108F872738E6181DBF0CFDF5 /* Pods-McDonalds.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-McDonalds.release.xcconfig"; path = "Target Support Files/Pods-McDonalds/Pods-McDonalds.release.xcconfig"; sourceTree = "<group>"; };
+		60A639179E445A77FB94103A /* Pods_McDonalds.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_McDonalds.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC50B373CE3CE01F6D8E665B /* Pods-McDonalds.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-McDonalds.debug.xcconfig"; path = "Target Support Files/Pods-McDonalds/Pods-McDonalds.debug.xcconfig"; sourceTree = "<group>"; };
+		C23579E0256CD1850008EF4D /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		C23E2469256857540035CA1E /* UIButton + Animation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton + Animation.swift"; sourceTree = "<group>"; };
-		C24127A42561C6C500DD061A /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		C24127A72561C9FB00DD061A /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		C24127A72561C9FB00DD061A /* StandartProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StandartProfileCell.swift; sourceTree = "<group>"; };
+		C253AC63256C2C09002FF7C1 /* DateProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateProfileCell.swift; sourceTree = "<group>"; };
+		C253AC69256C3816002FF7C1 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		C26E16BE2561B2B0009DB676 /* UIStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIStackView.swift; sourceTree = "<group>"; };
 		C26E16C22561B96D009DB676 /* SetupProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetupProfileViewController.swift; sourceTree = "<group>"; };
 		C2971E5225616EBC005E623D /* UIButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIButton.swift; sourceTree = "<group>"; };
@@ -48,7 +55,6 @@
 		C2A87F4A2561642600607C4B /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		C2A87F4D256168FA00607C4B /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
 		C2B93E7F25682EBB00CD165A /* CustomSegmentedControl.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegmentedControl.swift; sourceTree = "<group>"; };
-		C2B93E822568368C00CD165A /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		C2E3BFBD25629C5A0036FF02 /* UISegmentedControll.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UISegmentedControll.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -57,17 +63,47 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF8235D25BA520F2772D11CC /* Pods_McDonalds.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		18FBA910A3A8F2511F6EA920 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				60A639179E445A77FB94103A /* Pods_McDonalds.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7F046DE143D838EA523A245D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BC50B373CE3CE01F6D8E665B /* Pods-McDonalds.debug.xcconfig */,
+				108F872738E6181DBF0CFDF5 /* Pods-McDonalds.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		C253AC66256C2D59002FF7C1 /* Cells */ = {
+			isa = PBXGroup;
+			children = (
+				C24127A72561C9FB00DD061A /* StandartProfileCell.swift */,
+				C253AC63256C2C09002FF7C1 /* DateProfileCell.swift */,
+			);
+			path = Cells;
+			sourceTree = "<group>";
+		};
 		C2A87F2625615D9D00607C4B = {
 			isa = PBXGroup;
 			children = (
 				C2A87F3125615D9D00607C4B /* McDonalds */,
 				C2A87F3025615D9D00607C4B /* Products */,
+				7F046DE143D838EA523A245D /* Pods */,
+				18FBA910A3A8F2511F6EA920 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -84,10 +120,9 @@
 			children = (
 				C2A87F52256169B600607C4B /* Application */,
 				C2A87F4D256168FA00607C4B /* AuthViewController.swift */,
-				C2B93E822568368C00CD165A /* TestViewController.swift */,
 				C26E16C22561B96D009DB676 /* SetupProfileViewController.swift */,
-				C24127A42561C6C500DD061A /* ProfileViewController.swift */,
-				C24127A72561C9FB00DD061A /* ProfileCell.swift */,
+				C253AC69256C3816002FF7C1 /* ProfileViewController.swift */,
+				C253AC66256C2D59002FF7C1 /* Cells */,
 				C2A87F5625616A7E00607C4B /* Class */,
 				C2A87F5525616A0A00607C4B /* Extensions */,
 				C2A87F54256169E100607C4B /* Supporting files */,
@@ -110,6 +145,7 @@
 				C2A87F3D25615D9E00607C4B /* LaunchScreen.storyboard */,
 				C2A87F3B25615D9E00607C4B /* Assets.xcassets */,
 				C2A87F4025615D9E00607C4B /* Info.plist */,
+				C23579E0256CD1850008EF4D /* GoogleService-Info.plist */,
 			);
 			path = "Supporting files";
 			sourceTree = "<group>";
@@ -145,9 +181,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = C2A87F4325615D9E00607C4B /* Build configuration list for PBXNativeTarget "McDonalds" */;
 			buildPhases = (
+				301072D659BF817944C0B5EF /* [CP] Check Pods Manifest.lock */,
 				C2A87F2B25615D9D00607C4B /* Sources */,
 				C2A87F2C25615D9D00607C4B /* Frameworks */,
 				C2A87F2D25615D9D00607C4B /* Resources */,
+				474D79C46F2718B4E870E5DA /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -196,29 +234,72 @@
 			buildActionMask = 2147483647;
 			files = (
 				C2A87F3F25615D9E00607C4B /* LaunchScreen.storyboard in Resources */,
+				C23579E1256CD1850008EF4D /* GoogleService-Info.plist in Resources */,
 				C2A87F3C25615D9E00607C4B /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		301072D659BF817944C0B5EF /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-McDonalds-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		474D79C46F2718B4E870E5DA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-McDonalds/Pods-McDonalds-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-McDonalds/Pods-McDonalds-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-McDonalds/Pods-McDonalds-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		C2A87F2B25615D9D00607C4B /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C24127A82561C9FB00DD061A /* ProfileCell.swift in Sources */,
+				C24127A82561C9FB00DD061A /* StandartProfileCell.swift in Sources */,
 				C23E246A256857540035CA1E /* UIButton + Animation.swift in Sources */,
 				C2971E5925617F76005E623D /* UIImageView.swift in Sources */,
-				C2B93E832568368C00CD165A /* TestViewController.swift in Sources */,
 				C2A87F482561610500607C4B /* OneLineTextField.swift in Sources */,
 				C2A87F3325615D9D00607C4B /* AppDelegate.swift in Sources */,
 				C2A87F3525615D9D00607C4B /* SceneDelegate.swift in Sources */,
+				C253AC64256C2C09002FF7C1 /* DateProfileCell.swift in Sources */,
+				C253AC6A256C3816002FF7C1 /* ProfileViewController.swift in Sources */,
 				C2971E5C2561816C005E623D /* UILabel.swift in Sources */,
 				C2971E5625616FA7005E623D /* UIFont.swift in Sources */,
 				C2E3BFBE25629C5A0036FF02 /* UISegmentedControll.swift in Sources */,
 				C2B93E8025682EBB00CD165A /* CustomSegmentedControl.swift in Sources */,
-				C24127A52561C6C500DD061A /* ProfileViewController.swift in Sources */,
 				C2A87F4E256168FA00607C4B /* AuthViewController.swift in Sources */,
 				C26E16C32561B96D009DB676 /* SetupProfileViewController.swift in Sources */,
 				C2A87F4B2561642600607C4B /* UIColor.swift in Sources */,
@@ -359,6 +440,7 @@
 		};
 		C2A87F4425615D9E00607C4B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC50B373CE3CE01F6D8E665B /* Pods-McDonalds.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -378,6 +460,7 @@
 		};
 		C2A87F4525615D9E00607C4B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 108F872738E6181DBF0CFDF5 /* Pods-McDonalds.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;

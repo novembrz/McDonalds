@@ -2,47 +2,47 @@
 //  ProfileViewController.swift
 //  McDonalds
 //
-//  Created by Дарья on 15.11.2020.
+//  Created by Дарья on 23.11.2020.
 //
 
 import UIKit
 
-class ProfileViewController: UITableViewController {
+class ProfileViewController: UIViewController {
     
-    let profileArray = ["Имя", "Фамилия", "Дата рождения", "Пол", "Телефон", "Почта", "Адрес"]
+    var tabelView: UITableView = {
+        let tableView = UITableView()
+        tableView.register(DateProfileCell.self, forCellReuseIdentifier: DateProfileCell.reuseId)
+        return tableView
+    }()
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
+        view.backgroundColor = .white
+        view.addSubview(tabelView)
         
-        tableView.separatorStyle = .none
+        tabelView.delegate = self
+        tabelView.dataSource = self
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        tabelView.frame = view.bounds
     }
     
 
-    // MARK: - Table view data source
+}
 
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return profileArray.count
+extension ProfileViewController: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 1
     }
-
     
-//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-//        
-//        switch indexPath.row {
-//        
-//        case 0, 1:
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "profileCell", for: indexPath) as! ProfileCell
-//            cell.label.text = profileArray[indexPath.row]
-//            return cell
-//        case 3:
-//            let cell = tableView.dequeueReusableCell(withIdentifier: "profileCell", for: indexPath) as! ProfileCell
-//            cell.label.text = profileArray[indexPath.row]
-//            return cell
-//        default:
-//            break
-//            
-//        }
-//        
-//    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: DateProfileCell.reuseId) as! DateProfileCell
+        cell.configure(text: "dead inside")
+        return cell
+    }
     
-
+    
 }
