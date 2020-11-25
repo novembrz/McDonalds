@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import Firebase
 
 class AuthViewController: UIViewController {
     
@@ -27,9 +28,10 @@ class AuthViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         createUI()
-        keyboardSettings()
         segmentedAction()
         setupConstraints()
+        
+        nextButton.addTarget(self, action: #selector(buttonWork), for: .touchUpInside)
     }
     
     
@@ -37,7 +39,8 @@ class AuthViewController: UIViewController {
         
         view.backgroundColor = .darkRedColor()
         
-        passwordTextField.smartDashesType = .yes
+        passwordTextField.isSecureTextEntry = true
+        confirmPassTextField.isSecureTextEntry = true
         confirmPassTextField.isHidden = true
         
         warningLabel.textColor = .yellowColor()
@@ -68,23 +71,85 @@ class AuthViewController: UIViewController {
 }
 
 
-//MARK: Keyboard Settings
+//MARK: Firestore methods
+
 extension AuthViewController {
     
-    private func keyboardSettings(){
-        NotificationCenter.default.addObserver(self, selector: #selector(kbDidShow), name: UIResponder.keyboardDidShowNotification, object: nil) // open
-        NotificationCenter.default.addObserver(self, selector: #selector(kbDidHide), name: UIResponder.keyboardDidHideNotification, object: nil) // close
+    func checkSignInValid() -> String? {
+        if emailTextField.text == "" ||
+            emailTextField.text == nil ||
+            passwordTextField.text == "" ||
+            passwordTextField.text == nil ||
+            confirmPassTextField.text == "" ||
+            confirmPassTextField.text == nil {
+            return "Заполните все поля!"
+        } else if confirmPassTextField.text != passwordTextField.text {
+            return "Пароли не совпадают!"
+        }
+        return nil
     }
     
-    @objc private func kbDidShow(notification: NotificationCenter){
-        
+    func checkAuthValid() -> String? {
+        if emailTextField.text == "" ||
+            emailTextField.text == nil ||
+            passwordTextField.text == "" ||
+            passwordTextField.text == nil {
+            return "Заполните все поля!"
+        }
+        return nil
     }
     
-    @objc private func kbDidHide(){
+    
+    @objc private func buttonWork(){
         
+        if nextButton.title(for: .normal) == "Создать профиль"{
+            if checkSignInValid() != nil {
+                warningLabel.isHidden = false
+                warningLabel.text = checkSignInValid()
+                nextButton.shake()
+            } else {
+                warningLabel.isHidden = true
+                
+                Auth.auth().createUser(withEmail: emailTextField.text!, password: passwordTextField.text!) { (result, error) in //чисто эта функция регает в мейл
+                    if error != nil {
+                        self.warningLabel.isHidden = true
+                        self.warningLabel.text = "\(String(describing: error?.localizedDescription))"
+                    } else {
+                        let db = Firestore.firestore() //а это для фаерстор сохраняем значения
+                        db.collection("users").addDocument(data: [
+//                            "firstname": "",
+//                            "lastname": "",
+                            "uid": result!.user.uid
+                        ]) { (error) in
+                            if error != nil {
+                                fatalError("Error saving user in database")
+                            }
+                        }
+                        
+                        self.present(SignInViewController(), animated: true, completion: nil)
+                    }
+                }
+            }
+        } else if nextButton.title(for: .normal) == "Войти" {
+            if checkAuthValid() != nil {
+                warningLabel.isHidden = false
+                warningLabel.text = checkAuthValid()
+                nextButton.shake()
+            } else {
+                warningLabel.isHidden = true
+                
+                Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!) { (result, error) in
+                    if error != nil {
+                        self.warningLabel.isHidden = true
+                        self.warningLabel.text = "Неверное имя пользователя или пароль"
+                    } else {
+                        self.present(SignInViewController(), animated: true, completion: nil)
+                    }
+                }
+            }
+        }
     }
 }
-
 
 //MARK: Setup Constraints
 extension AuthViewController {
